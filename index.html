@@ -1,6 +1,18 @@
 <html>
 <head>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    function addPtag(){
+        console.log('onclick');
+        
+        $.ajax({
+            url: "/ajax.html",
+            success: function( result ) {
+                $("#ajax-contents").append(result);
+            }
+        });
+    }
+</script>
 </head>
 <body>
     <p>aaaaaaaaaaaaaa</p>
